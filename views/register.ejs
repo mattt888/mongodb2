@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h4>Vidd fel a bejegyzéseket</h4>
+
+    <form action="/register" method="post">
+
+        <% for( i=1; i<4; i++ ) { %>
+
+            <div>User <%= i %></div>
+
+            <input type="text" placeholder="Add meg a neved" name="name[]">
+            <br><br>
+
+            <input type="text" placeholder="Add meg az email címed" name="email[]">
+            <hr>
+
+        <% } %>
+
+        <button>Küldés</button>
+    </form>
+</body>
+</html>
